@@ -1,0 +1,119 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";  // Layout dosyanızın yolunu belirtin.
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgerler</title>
+    <link rel="icon" href="~/css/images.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: wheat; /* Arka plan rengini buğday rengi yaptık */
+        }
+
+    
+
+        /* İçerik için boşluk (navbar sabit olduğundan üstte yer bırak) */
+        .content {
+            padding-top: 70px;
+            margin: 20px;
+        }
+
+        /* Başlık */
+        .menu-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #F23030;
+            background-color: #f8f8f8; /* Arka plan rengi */
+            border: 2px solid #F23030; /* Kenarlık rengi */
+            border-radius: 8px; /* Kenarların yuvarlanması */
+            padding: 10px; /* İç boşluk */
+            width: fit-content; /* İçeriğe göre genişlik */
+            margin: 0 auto 20px auto; /* Kutuyu ortalar ve alt boşluk ekler */
+            text-align: center; /* Başlık yazısını ortalar */
+        }
+
+        /* Ürün listesi */
+        .menu-item {
+            background-color: #a99c91;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+            .menu-item h3 {
+                margin: 0;
+                font-size: 24px;
+                color: white; /* Yazı rengi beyaz */
+                text-shadow: 2px 2px 0 #79717A, /* Sağ-alt kırmızı gölge */
+                -2px -2px 0 #79717A, /* Sol-üst kırmızı gölge */
+                2px -2px 0 #79717A, /* Sağ-üst kırmızı gölge */
+                -2px 2px 0 #79717A; /* Sol-alt kırmızı gölge */
+            }
+
+            .menu-item .price {
+                font-weight: bold;
+                color: #267365;
+            }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- İçerik -->
+    <div class="content">
+        <div class="menu-title">Hamburger Menüler</div>
+
+        <!-- Menü Ürünü 1 -->
+        <div class="menu-item">
+            <h3>Arkadaş Menü</h3>
+            <p>2 adet Hammburger + patates kızartması + 6'lı soğan halkası + 1Lt. Pepsi.</p>
+            <p class="price">45 TL</p>
+        </div>
+
+        <!-- Menü Ürünü 2 -->
+        <div class="menu-item">
+            <h3>Arkadaş Chicken Menü</h3>
+            <p>2 adet Tavuk Burger + patates kızartması + 6'lı soğan halkası + 1Lt. Pepsi.</p>
+            <p class="price">35 TL</p>
+        </div>
+
+        <!-- Menü Ürünü 3 -->
+        <div class="menu-item">
+            <h3>Ofis Menü</h3>
+            <p>3 adet Hammburger + patates kızartması + 9'lı soğan halkası + 1Lt. Pepsi.</p>
+            <p class="price">25 TL</p>
+        </div>
+
+        <!-- Menü Ürünü 4 -->
+        <div class="menu-item">
+            <h3>Aile Menü</h3>
+            <p>4 adet Hammburger + patates kızartması + 12'lı soğan halkası + 1Lt. Pepsi.</p>
+            <p class="price">20 TL</p>
+        </div>
+
+        <!-- Menü Ürünü 5 -->
+        <div class="menu-item">
+            <h3>Aile Chicken Menü</h3>
+            <p>3 adet Tavuk Burger + patates kızartması + 9'lı soğan halkası + 1Lt. Pepsi.</p>
+            <p class="price">Fiyat: 30 TL</p>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}

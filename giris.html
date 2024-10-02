@@ -1,0 +1,196 @@
+ *@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hammburger Menü</title>
+    <link rel="icon" href="~/Images/images.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI Variable Text', sans-serif;
+            background-image: url("/Images/arkaplann.png"); /* Arka plan resmini ekledik */
+            background-size: cover; /* Resmin tüm ekranı kaplamasını sağlar */
+            background-position: center; /* Resmi ortalar */
+            background-attachment: fixed; /* Sayfa kaydırıldığında arka plan sabit kalır */
+        }
+
+        /* Sabit Üst Menü */
+        .navbar {
+            background-color: #403831; /* Başlık arka planı kırmızımsı */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 15px;
+            color: #F2D8C2; /* Başlık yazısı açık renk */
+            text-align: left; /* Başlığı sola hizala */
+            font-size: 40px; /* Yazı tipi boyutunu büyüt */
+            font-family: 'Courier New', Courier, monospace; /* Şekilli yazı tipi */
+            display: flex; /* İçerikleri yan yana hizala */
+            margin-left: 30px; /* Sol kenardan biraz boşluk bırak */
+            align-items: center; /* Yatayda ortala */
+        }
+
+            /* Başlık Resmi */
+            .navbar img {
+                width: 50px; /* Resmin genişliğini ayarla */
+                height: 50px; /* Resmin yüksekliğini ayarla */
+                margin-right: 15px; /* Resim ile başlık arasına boşluk bırak */
+            }
+
+        /* İçerik için boşluk (navbar sabit olduğundan üstte yer bırak) */
+        .content {
+            padding-top: 70px;
+        }
+
+        /* Ürün listesi (2 sütun halinde) */
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Kutuları ortalar */
+            margin: 20px;
+        }
+
+        /* Her ürün kartı */
+        .product {
+            width: 400px; /* Her kutu genişliği %50 - kenar boşlukları için 20px */
+            background-color: #8C7C6D; /* Arka plan tamamen opak */
+            margin: 15px; /* Üst ve alt kenar boşluğu */
+            padding: 17px;
+            display: flex; /* Flex kutu yapısı */
+            flex-direction: column; /* Dikey olarak düzenle */
+            justify-content: center; /* Dikey ortala */
+            align-items: center; /* Yatay ortala */
+            border: 8px solid #ddd;
+            border-radius: 24px;
+            cursor: pointer; /* Tıklanabilirlik göstergesi */
+            transition: transform 0.2s; /* Hover animasyonu için */
+            font-family: 'Technic'; /* Yazı tipi */
+            font-size: 20px; /* Yazı tipi boyutunu 25px yap */
+            color: white; /* Yazı rengini beyaz yap */
+            height: 60px; /* Tüm kutular için sabit yükseklik ayarlama */
+        }
+
+            .product:hover {
+                transform: scale(1.05); /* Üzerine gelindiğinde hafif büyütme efekti */
+            }
+
+            /* Ürün başlığı */
+            .product h3 {
+                margin-top: 0;
+            }
+
+            /* Ürün resmi */
+            .product img {
+                width: 150px; /* Sabit genişlik */
+                height: 150px; /* Sabit yükseklik */
+                object-fit: cover; /* Görsellerin orantılı şekilde kesilmeden kapsanmasını sağlar */
+                border-radius: 8px;
+            }
+
+        /* Linklerin düzenlenmesi */
+        a {
+            text-decoration: none; /* Alt çizgiyi kaldır */
+            color: white; /* Bağlantıları beyaz yap */
+        }
+
+            a:hover {
+                color: white; /* Hover sırasında renk değişimi */
+            }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Sabit Üst Menü -->
+    <div class="navbar">
+        HAMMBURGER <!-- Başlık sola hizalandı, büyütüldü ve kalınlaştırıldı -->
+    </div>
+
+    <!-- İçerik -->
+    <div class="content">
+        <div class="product-list">
+
+            <!-- Ürün 1 -->
+            <div class="product">
+                <a href="@Url.Action("BurgerMenu", "Home")">
+                <h3>Burger Menüler</h3>
+                </a>
+            </div>
+
+            
+            <!-- Ürün 2 -->
+            <div class="product">
+                <a href="@Url.Action("Burgerler", "Home")">
+                    <h3>Burgerler</h3>
+                    
+                </a>
+            </div>
+
+            <!-- Ürün 3 -->
+            <div class="product"> 
+                <a href="@Url.Action("Sandvicler", "Home")">
+                <h3>Sandviçler</h3>
+                </a>
+            </div>
+
+            <!-- Ürün 4 -->
+            <div class="product" >
+                <a href="@Url.Action("Tostlar", "Home")">
+                <h3>Tostlar</h3>
+                </a>
+            </div>
+
+            <!-- Ürün 5 -->
+            <div class="product" >
+                <a href="@Url.Action("Menuler", "Home")">
+                <h3>Menüler</h3>
+                </a>
+            </div>
+
+            <!-- Ürün 6 -->
+            <div class="product" >
+                <a href="@Url.Action("Salata", "Home")">
+                <h3>Salatalar</h3>
+                </a>
+            </div>
+
+            <!-- Ürün 7 -->
+            <div class="product">
+                <a href="@Url.Action("YanUrunler", "Home")">
+                <h3>Yan Ürünler</h3>
+                </a>
+            </div>
+
+            <!-- Ürün 8 -->
+            <div class="product">
+                <a href="@Url.Action("Soslar", "Home")">
+                <h3>Soslar</h3>
+                </a>
+            </div>
+
+            <!-- Ürün 9 -->
+            <div class="product">
+                <a href="@Url.Action("Icecekler", "Home")">
+                <h3>İçecekler</h3>
+                </a>
+            </div>
+
+            <!-- Ürün 10 -->
+            <div class="product">
+                <a href="@Url.Action("EkstraMalzemeler", "Home")">
+                <h3>Ekstra Malzemeler</h3>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
